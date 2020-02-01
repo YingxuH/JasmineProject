@@ -28,9 +28,16 @@ describe("Superagent", function() {
   //   expect(superagentHandler.status).toEqual(201);
   // });
 
-  it("should be able to send delete request", async function() {
+  // it("should be able to send delete request", async function() {
+  //
+  //   await superagentHandler.delete_request();
+  //   expect(superagentHandler.delete_status).toEqual(200);
+  // });
 
-    await superagentHandler.delete_request();
-    expect(superagentHandler.delete_status).toEqual(200);
+  it("should be able to send put request", async function() {
+
+    await superagentHandler.put_request();
+    expect(superagentHandler.put_status).toEqual(200);
   });
+
 });

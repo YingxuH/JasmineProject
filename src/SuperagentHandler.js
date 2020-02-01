@@ -31,3 +31,15 @@ SuperagentHandler.prototype.delete_request = async function() {
   var status = await connection.status;
   this.delete_status = status;
 }
+
+SuperagentHandler.prototype.put_request = async function() {
+  var data = {
+    first_name: "Yingxu",
+    last_name: "He",
+    email: "yingxu.he1998@gmail.com"
+  };
+
+  var connection = await superagent.put("http://localhost:3000/users/1").set('Content-Type', 'application/json').send(JSON.stringify(data));
+  var status = await connection.status;
+  this.put_status = status;
+}
