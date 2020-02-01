@@ -36,4 +36,9 @@ describe("Axios", function() {
     };
     expect(axiosHandler.multiple_user_ids).toEqual(data);
   });
+
+  it("should be able to send get requests via config", async function() {
+    await axiosHandler.get_request_via_config();
+    expect(axiosHandler.user_info_1).toEqual(28558142);
+  });
 });

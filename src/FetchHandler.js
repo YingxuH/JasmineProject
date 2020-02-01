@@ -49,3 +49,31 @@ FetchHandler.prototype.post_request_object = async function() {
   var post_data = await post_info.json();
   this.post_data = post_data;
 }
+
+FetchHandler.prototype.handle_error_via_response = function() {
+  fetch(`https://api.github.com/users/YingxuH_blah`).then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+  })
+}
+
+FetchHandler.prototype.put_request = async function() {
+  var data = {
+    id: 1,
+    first_name: "Yingxu",
+    last_name: "He",
+    email: "yingxu.he1998@gmail.com"
+  }
+
+  var request = new Request('http://localhost:3000/users/1', {
+    method: 'PUT',
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    }),
+    body: JSON.stringify(data)
+  });
+
+  var put_info = await fetch(request);
+  this.status = put_info.status;
+}

@@ -58,7 +58,6 @@ describe("JQueryHandler", function() {
   it("should be able to send get request via getJSON()", function() {
     var test = $.getJSON("https://api.github.com/users/YingxuH",
       function (data, textStatus, jqXHR) {
-        console.log(data);
         expect(data.id).toEqual(28558142);
         expect(textStatus).toEqual('success');
       })

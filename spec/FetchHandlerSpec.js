@@ -33,4 +33,17 @@ describe("Fetch", function() {
   //   await fetchHandler.post_request_object();
   //   expect(fetchHandler.post_data).toEqual(data);
   // });
+
+  it("should be able to handler error", async function() {
+    try {
+        await fetchHandler.handle_error_via_response();
+    } catch(err) {
+      expect(err.message).toEqual('Network response was not ok');
+    }
+  });
+
+  it("should be able to send put request", async function() {
+    await fetchHandler.put_request();
+    expect(fetchHandler.status).toEqual(200);
+  });
 });
