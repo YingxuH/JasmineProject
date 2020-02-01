@@ -27,7 +27,7 @@ SuperagentHandler.prototype.post_request = async function() {
 }
 
 SuperagentHandler.prototype.delete_request = async function() {
-  var connection = await superagent.del("http://localhost:3000/users/54");
+  var connection = await superagent.del("http://localhost:3000/users/3");
   var status = await connection.status;
   this.delete_status = status;
 }

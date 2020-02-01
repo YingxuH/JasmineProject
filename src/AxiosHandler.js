@@ -21,7 +21,7 @@ AxiosHandler.prototype.post_request = async function() {
 }
 
 AxiosHandler.prototype.delete_request = async function() {
-  var delete_info = await axios.delete('http://localhost:3000/users/16/');
+  var delete_info = await axios.delete('http://localhost:3000/users/2/');
   var delete_status = await delete_info.status;
   this.delete_status = delete_status;
 }
