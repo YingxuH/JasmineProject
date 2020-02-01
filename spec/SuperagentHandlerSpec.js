@@ -16,23 +16,23 @@ describe("Superagent", function() {
     expect(superagentHandler.status).toEqual(200);
   });
 
-  // it("should be able to send post request", async function() {
-  //   var data = {
-  //     id: 55,
-  //     first_name: "Yingxu",
-  //     last_name: "He",
-  //     email: "yingxu.he1998@gmail.com"
-  //   };
-  //
-  //   await superagentHandler.post_request();
-  //   expect(superagentHandler.status).toEqual(201);
-  // });
+  it("should be able to send post request", async function() {
+    var data = {
+      id: 55,
+      first_name: "Yingxu",
+      last_name: "He",
+      email: "yingxu.he1998@gmail.com"
+    };
 
-  // it("should be able to send delete request", async function() {
-  //
-  //   await superagentHandler.delete_request();
-  //   expect(superagentHandler.delete_status).toEqual(200);
-  // });
+    await superagentHandler.post_request();
+    expect(superagentHandler.status).toEqual(201);
+  });
+
+  it("should be able to send delete request", async function() {
+
+    await superagentHandler.delete_request();
+    expect(superagentHandler.delete_status).toEqual(200);
+  });
 
   it("should be able to send put request", async function() {
 

@@ -15,22 +15,22 @@ describe("JQueryHandler", function() {
     })
   });
 
-  // it("should be able to send post request", function() {
-  //   var data = {
-  //       id: 63,
-  //       first_name: "Yingxu",
-  //       last_name: "He",
-  //       email: "yingxu.he1998@gmail.com"
-  //     };
-  //
-  //   var test = $.ajax({
-  //     url: "http://localhost:3000/users",
-  //     data: data,
-  //     type: "POST"
-  //   }).done(res => {
-  //     expect(res.id).toEqual("63");
-  //   })
-  // });
+  it("should be able to send post request", function() {
+    var data = {
+        id: 63,
+        first_name: "Yingxu",
+        last_name: "He",
+        email: "yingxu.he1998@gmail.com"
+      };
+
+    var test = $.ajax({
+      url: "http://localhost:3000/users",
+      data: data,
+      type: "POST"
+    }).done(res => {
+      expect(res.id).toEqual("63");
+    })
+  });
 
 
   it("should be able to send get request via get()", function() {
