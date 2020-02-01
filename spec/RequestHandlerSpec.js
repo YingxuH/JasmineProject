@@ -49,7 +49,7 @@ describe("RequestHandler", function() {
     oReq.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     await oReq.send(JSON.stringify(data));
     oReq.onload = function() {
-      expect(oReq.status).toEqual(200);
+      expect(oReq.status).toEqual(201);
     }
   });
 
