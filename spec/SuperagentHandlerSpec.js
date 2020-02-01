@@ -8,49 +8,29 @@ describe("Superagent", function() {
 
   it("should be able to send get request", async function() {
     await superagentHandler.get_request();
-    console.log(superagentHandler.user_id);
     expect(superagentHandler.user_id).toEqual(28558142);
   });
 
+  it("should be able to send head request", async function() {
+    await superagentHandler.head_request();
+    expect(superagentHandler.status).toEqual(200);
+  });
 
-  // describe("when song has been paused", function() {
-  //   beforeEach(function() {
-  //     player.play(song);
-  //     player.pause();
-  //   });
+  // it("should be able to send post request", async function() {
+  //   var data = {
+  //     id: 55,
+  //     first_name: "Yingxu",
+  //     last_name: "He",
+  //     email: "yingxu.he1998@gmail.com"
+  //   };
   //
-  //   it("should indicate that the song is currently paused", function() {
-  //     expect(player.isPlaying).toBeFalsy();
-  //
-  //     // demonstrates use of 'not' with a custom matcher
-  //     expect(player).not.toBePlaying(song);
-  //   });
-  //
-  //   it("should be possible to resume", function() {
-  //     player.resume();
-  //     expect(player.isPlaying).toBeTruthy();
-  //     expect(player.currentlyPlayingSong).toEqual(song);
-  //   });
+  //   await superagentHandler.post_request();
+  //   expect(superagentHandler.status).toEqual(201);
   // });
-  //
-  // // demonstrates use of spies to intercept and test method calls
-  // it("tells the current song if the user has made it a favorite", function() {
-  //   spyOn(song, 'persistFavoriteStatus');
-  //
-  //   player.play(song);
-  //   player.makeFavorite();
-  //
-  //   expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);
-  // });
-  //
-  // //demonstrates use of expected exceptions
-  // describe("#resume", function() {
-  //   it("should throw an exception if song is already playing", function() {
-  //     player.play(song);
-  //
-  //     expect(function() {
-  //       player.resume();
-  //     }).toThrowError("song is already playing");
-  //   });
-  // });
+
+  it("should be able to send delete request", async function() {
+
+    await superagentHandler.delete_request();
+    expect(superagentHandler.delete_status).toEqual(200);
+  });
 });
