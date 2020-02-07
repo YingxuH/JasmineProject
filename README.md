@@ -10,3 +10,5 @@ The post requests might fail sometimes. Reasons could be multiple requests query
 To re-run the test, discard the changes on data.json and refresh the Jasmine webpage.
 
 ![GitHub Logo](/testWebApp_screen.png)
+
+[Discussions](/Discussion.adoc)
