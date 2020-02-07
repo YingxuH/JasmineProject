@@ -38,3 +38,18 @@ Promises are eager, meaning that a promise will start doing whatever task you gi
 === JQuery.ajax()
 
 * only push and get request
+
+=== XMLHTTPRequest
+
+=== Axios
+* promise based
+* Able to cancel a request
+* Provide upload progress tool
+* Multiple get requests
+
+
+=== Fetch
+* promise based
+
+=== Superagent
+* promise based
